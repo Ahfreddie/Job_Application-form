@@ -1,0 +1,138 @@
+body {
+  background-color: #ffffff;
+  color: #100e34;
+  font-family: Helvetica, sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.08), 0 8px 9px rgba(0, 0, 0, 0.04);
+  margin: 20px auto;
+  padding: 10px 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4f48ec;
+}
+
+.description {
+  text-align: justify;
+  font-weight: 1.2rem;
+  margin: 20px 0;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+label:not(.radio-group-btn) {
+  display: block;
+  margin: 10px 0;
+  font-weight: 550;
+}
+
+input:not(.radio),
+select,
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1.8px solid #4f48ec;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box; /* includes padding and border in width, so all inputs, select and text area match in width  */
+}
+
+input,
+input::placeholder,
+textarea,
+textarea::placeholder,
+select {
+  color: #3c4048;
+  font-size: 1rem;
+}
+
+fieldset {
+  width: 100%;
+  border: 1.8px solid #4f48ec;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+fieldset legend {
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.radio {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #4f48ec;
+  vertical-align: bottom;
+}
+
+.radio::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(3px, 3px) scale(0);
+  transition: all 0.3s ease-in;
+}
+
+.radio:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  background-color: #4f48eb;
+}
+
+.radio:checked label {
+  color: #4f48eb;
+}
+
+.submit-btn {
+  background-color: #4f48ec;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in;
+}
+
+.submit-btn:hover {
+  background-color: #ffbf18;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #ffbf18;
+  outline: none;
+  /* remove default browser outline */
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border: 2px solid red;
+  outline: none;
+}
+
+input:not(.radio):valid,
+select:valid,
+textarea:valid {
+  border: 2px solid green;
+  outline: none;
+}

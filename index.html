@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- The title is a creative twist from the usual Job Application form since its aimed toward creatives -->
+      <h1 class="title">Bring Your Ideas to Life</h1>
+      <!-- Added a short intro to give applicants a peek into the org's culture -->
+      <p class="description">
+        We&apos;re a small animation studio driven by storytelling, creativity,
+        and collaboration. We believe great ideas come from people who care
+        about the craft and enjoy growing together. This application is a chance
+        for you to tell us a little about yourself, your interests, and what
+        you&apos;d love to create with us.
+      </p>
+      <form action="#" method="post">
+        <label for="name">Fullname: </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Enter your fullname"
+          maxlength="100"
+        />
+
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          maxlength="320"
+          autocomplete="email"
+          placeholder="Enter your email"
+        />
+
+        <label for="role">Role:</label>
+        <select name="role" id="role" required>
+          <option value="" selected disabled>Select a Role</option>
+          <option value="lead">Animation Lead</option>
+          <option value="animator">Animator</option>
+          <option value="artist">Artist / Illustrator</option>
+          <option value="sound">Sound & Editing</option>
+          <option value="production">Production Support</option>
+        </select>
+
+        <fieldset class="radio-group">
+          <legend>Availability:</legend>
+          <input
+            type="radio"
+            name="availability"
+            id="full-time"
+            value="full-time"
+            class="radio"
+            checked
+          />
+          <label for="full-time" class="radio-group-btn">Full-Time</label>
+
+          <input
+            type="radio"
+            name="availability"
+            id="part-time"
+            value="part-time"
+            class="radio"
+          />
+          <label for="part-time" class="radio-group-btn">Part-time</label>
+        </fieldset>
+        <label for="message"
+          >What excites you about our studio, and how do you see yourself
+          contributing to our creative work?</label
+        >
+        <textarea
+          name="message"
+          id="message"
+          required
+          cols="50"
+          rows="8"
+          placeholder="Share your thoughts, ideas, or inspirations..."
+        ></textarea>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -72,6 +72,7 @@ fieldset legend {
   font-weight: 550;
 }
 
+/* styling for the radio buttons */
 .radio {
   appearance: none;
   width: 20px;
@@ -96,8 +97,14 @@ fieldset legend {
   background-color: #4f48eb;
 }
 
-.radio:checked label {
+.radio:checked + .radio-group-btn {
   color: #4f48eb;
+}
+
+.radio-group input[type="radio"]:checked {
+  border: 2px solid green;
+  background-color: aliceblue;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.08), 0 8px 9px rgba(0, 0, 0, 0.04);
 }
 
 .submit-btn {
@@ -135,4 +142,8 @@ select:valid,
 textarea:valid {
   border: 2px solid green;
   outline: none;
+}
+
+input:first-of-type {
+  /* border-radius: 8px; this was just for the sake of the assignment disabled only for now */
 }

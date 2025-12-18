@@ -58,6 +58,10 @@ select {
   font-size: 1rem;
 }
 
+input:focus::placeholder {
+  color: transparent;
+}
+
 fieldset {
   width: 100%;
   border: 1.8px solid #4f48ec;
@@ -130,16 +134,12 @@ textarea:focus {
   /* remove default browser outline */
 }
 
-input:invalid,
-select:invalid,
-textarea:invalid {
+:is(input, select, textarea):invalid {
   border: 2px solid red;
   outline: none;
 }
 
-input:not(.radio):valid,
-select:valid,
-textarea:valid {
+:is(input, select, textarea):valid {
   border: 2px solid #ffbf18;
   outline: none;
 }
